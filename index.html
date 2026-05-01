@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Streaming</title>
+
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+</head>
+
+<body>
+
+<header>
+  <h2>🛒 R.D COMPANY Tienda Streaming</h2>
+</header>
+
+<!-- BOTON CARRITO -->
+<div class="btn-carrito" onclick="toggleCarrito()">
+  🛒 <span id="contador">0</span>
+</div>
+
+<!-- BOTON WHATSAPP SOPORTE -->
+<a href="https://wa.me/543735549919" target="_blank" class="whatsapp-btn">
+  💬
+</a>
+
+<div class="container">
+  <div class="grid" id="productos"></div>
+</div>
+
+<!-- MODAL CARRITO -->
+<div id="modalCarrito" class="modal">
+  <div class="modal-content">
+
+    <h3>🧾 Tu Pedido</h3>
+
+    <div id="listaCarrito"></div>
+    <h3 id="total"></h3>
+
+    <div class="form-group">
+      <input id="nombre" placeholder="Nombre">
+      <input id="apellido" placeholder="Apellido">
+      <input id="whatsapp" placeholder="WhatsApp">
+    </div>
+
+    <button class="btn" onclick="confirmarPedido()">Confirmar Pedido</button>
+    <button class="btn" onclick="toggleCarrito()">Cerrar</button>
+
+  </div>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast">Producto agregado</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

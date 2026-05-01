@@ -1,0 +1,286 @@
+body{
+  margin:0;
+  font-family: Arial;
+  background:#0f0f1a;
+  color:#fff;
+}
+
+header{
+  padding:15px;
+  background:#1a1a2e;
+  text-align:center;
+}
+
+/* GRID */
+.container{
+  padding:15px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:15px;
+}
+
+/* CARD */
+.card{
+  background:#1a1a2e;
+  border-radius:12px;
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
+}
+
+.card-body{
+  padding:10px;
+}
+
+.card h4{
+  font-size:14px;
+}
+
+.card p{
+  font-size:12px;
+  opacity:0.7;
+}
+
+/* BOTONES */
+.btn{
+  background:#7c3aed;
+  border:none;
+  padding:10px;
+  width:100%;
+  color:#fff;
+  border-radius:8px;
+  cursor:pointer;
+  margin-top:5px;
+}
+
+/* SELECT */
+select{
+  width:100%;
+  padding:8px;
+  margin-top:5px;
+  border-radius:8px;
+}
+
+/* CARRITO BTN */
+.btn-carrito{
+  position:fixed;
+  top:10px;
+  right:10px;
+  background:#7c3aed;
+  font-size:30px;
+  padding:12px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+#contador{
+  font-size:12px;
+}
+
+/* MODAL */
+.modal{
+  display:none;
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  top:0;
+  left:0;
+}
+
+.modal-content{
+  background:#1a1a2e;
+  margin:10% auto;
+  padding:15px;
+  width:90%;
+  max-width:400px;
+  border-radius:12px;
+  max-height:80vh;
+  overflow-y:auto;
+}
+
+/* ITEM CARRITO */
+.item-carrito{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  background:#111827;
+  padding:10px;
+  border-radius:8px;
+  margin-top:8px;
+  gap:10px;
+}
+
+.item-carrito div{
+  font-size:13px;
+  line-height:1.4;
+}
+
+.item-carrito strong{
+  color:#a78bfa;
+}
+
+/* BOTON ELIMINAR */
+.item-carrito button{
+  background:#ef4444;
+  border:none;
+  color:#fff;
+  padding:5px 8px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+/* INPUT */
+input{
+  width:100%;
+  padding:10px;
+  margin-top:5px;
+  border-radius:8px;
+  border:none;
+}
+
+/* TOTAL */
+#total{
+  margin-top:10px;
+  font-size:16px;
+}
+
+/* TOAST */
+.toast{
+  position:fixed;
+  bottom:20px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#7c3aed;
+  padding:10px 20px;
+  border-radius:20px;
+  display:none;
+}
+
+/* MOBILE */
+@media(max-width:480px){
+  .modal-content{
+    margin:20% auto;
+  }
+}
+
+.whatsapp-btn{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  color:#fff;
+  font-size:22px;
+  padding:15px;
+  border-radius:50%;
+  text-decoration:none;
+  box-shadow:0 0 10px rgba(0,0,0,0.5);
+}
+
+
+/* FORMULARIO */
+.form-group{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  margin-top:10px;
+}
+
+/* INPUT MEJORADO */
+input{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:none;
+  background:#111827;
+  color:#fff;
+  font-size:14px;
+  box-sizing:border-box;
+}
+
+/* FOCUS */
+input:focus{
+  outline:2px solid #7c3aed;
+}
+
+/* BOTONES ESPACIADO */
+.modal-content .btn{
+  margin-top:10px;
+}
+
+.modal-content{
+  background:#1a1a2e;
+  margin:10% auto;
+  padding:20px;
+  width:90%;
+  max-width:400px;
+  border-radius:12px;
+  max-height:80vh;
+  overflow-y:auto;
+  display:flex;
+  flex-direction:column;
+}
+
+
+
+
+
+
+
+
+/* MOBILE PRO */
+@media(max-width:480px){
+
+  /* GRID MÁS GRANDE */
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  /* CARDS MÁS LIMPIAS */
+  .card img{
+    height:140px;
+  }
+
+  .card h4{
+    font-size:16px;
+  }
+
+  /* MODAL MÁS CENTRADO */
+  .modal-content{
+    margin:15% auto;
+    width:95%;
+    padding:15px;
+  }
+
+  /* BOTÓN CARRITO */
+  .btn-carrito{
+    padding:10px;
+    font-size:16px;
+  }
+
+  /* WHATSAPP */
+  .whatsapp-btn{
+    bottom:15px;
+    right:15px;
+    padding:12px;
+    font-size:20px;
+  }
+
+  /* ITEMS CARRITO */
+  .item-carrito{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .item-carrito button{
+    align-self:flex-end;
+    margin-top:5px;
+  }
+}
